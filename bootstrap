@@ -10,6 +10,7 @@ sudo apt-get install -y emacs-nox curl tree unzip zip mosh aspell-en
 cd $(dirname $0)
 # Current Approach to humacs
 git clone --recursive https://github.com/humacs/.emacs.d ~/.emacs.d
+curl -L https://storage.googleapis.com/apisnoop/dev/kubemacs-cache-0.9.32.tgz | tar --extract -z --directory ~/.emacs.d/
 
 # Next Approach to humacs
 # git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
