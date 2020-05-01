@@ -8,13 +8,18 @@ PROJECT=$1
 sudo apt-get install -y emacs24-nox curl tree unzip zip mosh aspell-en
 
 cd $(dirname $0)
+# Current Approach to humacs
+git clone --recursive https://github.com/humacs/.emacs.d ~/.emacs.d
 
-cp .emacs ~
+# Next Approach to humacs
+# git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+# git clone https://github.com/humacs/.spacemacs.d
 cp .bashrc ~
 cp .gemrc ~
 cp .gitconfig ~
 cp .profile ~
-cp .tmux.conf ~
+cp .tmate.conf ~
+# cp .tmux.conf ~
 
 sudo cp hub /usr/local/bin
 
